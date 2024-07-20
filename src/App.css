@@ -1,38 +1,516 @@
-.App {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.2s;
+}
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 120px;
+  align-items: center;
+  padding-top: 20px;
+}
+@media (max-width: 1141px) {
+  .navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.navbar div {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+}
+.navbar .login {
+  font-size: 1em;
+  /* background-color: red; */
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.navbar .menu {
+  font-size: 2.8em;
+  font-weight: 300;
+  transform: rotate(90deg);
+  letter-spacing: 1px;
+}
+.navbar .logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media (max-width: 918px) {
+  .navbar .logo {
+    font-size: 1.5em;
+  }
+  .navbar .login {
+    font-size: 0.75em;
+  }
+  .navbar .menu {
+    font-size: 2em;
+  }
+}
+@media (max-width: 548px) {
+  .navbar {
+    justify-content: start;
+    gap: 20px;
+  }
+  .navbar .logo {
+    position: relative;
+    left: 0%;
+    transform: translate(0%);
+  }
+  .navbar .login {
+    display: none;
+    visibility: none;
+  }
+}
+.home {
+  position: relative;
+  width: 100vw;
+  height: 120vh;
+  background: url("./Images/car-home.png") black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-position: center 40px;
+  background-size: auto;
+  position: relative;
+}
+.home h2 {
+  left: 50%;
+  position: relative;
+  width: 60vw;
+  font-size: 4em;
+  transform: translate(-50%, 50px);
   text-align: center;
 }
+.home-box {
+  position: relative;
+  width: 85%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 20px rgba(116, 116, 116, 0.431); */
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+    0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+}
+.home-box-1 {
+  background-color: aliceblue;
+  /* background-color: red; */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home-box input {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 1);
+  width: 180px !important;
+  height: 40px;
+  padding: 0px;
+  border-radius: 10px;
+  outline: none !important;
+  padding-right: 10px;
+  border: none;
+}
+.home-box input:nth-child(2n + 1) {
+  padding-left: 10px;
+  /* background-color: yellow; */
+}
+
+.home-box input:nth-child(2n) {
+  padding-left: 10px;
+  border: 1px solid rgb(187, 187, 187);
+}
+.home-box input:nth-child(2n):hover {
+  border: 1px solid black;
+}
+.home-box .text {
+  margin-bottom: 10px;
+}
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  background: white;
+  border-radius: 10px !important;
+  width: 180px !important;
+}
+.home-box .button {
+  background-color: black;
+  color: white;
+  height: fit-content;
+  align-self: center;
+  padding: 15px 15px;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (max-width: 930px) {
+  .home {
+    background-size: cover;
+  }
+  .home h2 {
+    font-size: 2.5em;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 583px) {
+  .home h2 {
+    font-size: 2.2em;
+    margin-top: 80px;
+  }
+}
+@media (max-width: 424px) {
+  .home h2 {
+    margin-top: 60px;
+    font-size: 2em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.car-rent-box {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  position: relative;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.car-box {
+  background-color: #0f0f0f0d;
+  height: 120px;
+  width: 186px;
+  /* padding: 40px; */
+  display: flex;
+  flex-direction: column-reverse;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 10px;
+  font-size: 0.8em;
+  gap: 2px;
+}
+.car-box:hover {
+  background-color: #0f0f0f1a;
+}
+.rent-box {
+  width: 85%;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+.rent-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 455px) {
+  .car-box {
+    height: 80px;
+    width: 124px;
+    font-size: 0.6em;
+  }
+  .car-box div {
+    scale: 0.8;
+  }
+}
+.container-collection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100vw;
+  position: relative;
+  background-color: #f5f5f5;
+  margin-top: 80px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.container-collection .collection {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container-collection .heading,
+.works .heading {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+.container-collection .heading h2,
+.works .heading h2 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+.container-collection .heading h4,
+.works .heading h4 {
+  max-width: 720px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.collection .buttons {
+  margin-top: 40px;
+  display: flex;
+  user-select: none;
+  justify-content: center;
+  gap: 20px;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.collection .buttons .clickable-div {
+  padding: 12px 19px;
+  background-color: white;
+  border-radius: 58px;
+}
+
+.collection .buttons .clickable-div.clicked {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.car-collection {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  padding: 0px 0px 20px;
+  border-radius: 24px;
+  text-align: start;
+  justify-content: start;
+}
+.car-collection svg {
+  width: 96%;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+}
+.car-collection .rent {
+  font-size: 1.6em;
+  font-weight: 800;
+}
+.car-collection .rent span {
+  font-size: 0.5em;
+  font-weight: 500;
+}
+.car-collection .button {
+  /* width: 100%; */
+  border: 2px solid black;
+  padding: 8px 16px;
+  border-radius: 32px;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.car-collection .name,
+.car-collection .rent,
+.car-collection .button {
+  margin: 20px;
+  margin-top: 12px;
+}
+.car-collection .button:hover {
+  background-color: black;
+  color: white;
+}
+.works .points {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  padding: 24px 20px;
+  width: 55%;
+  gap: 20px;
+  border: 1px solid #0000001a;
+  border-radius: 24px;
+  background-color: white;
+  margin-top: 20px;
+}
+.works .points .icon {
+  display: flex;
+  position: relative;
+  background-color: #f5f5f5;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 16px;
+}
+.works .points .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.works .points .text .heading {
+  text-align: start;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.works .points .text .content {
+  font-size: 0.9em;
+}
+.works .car-image img {
+  width: 85%;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 978px) {
+  .works .car-image {
+    display: none;
+    visibility: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .works .points {
+    width: 100%;
+  }
+}
+
+.services {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+}
+@media (max-width: 547px) {
+  .services {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.services .heading {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.services .content {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+.testimonials {
+  width: 85%;
+  position: relative;
+  left: 50%;
+  margin: 80px 0px;
+  transform: translate(-50%);
+}
+.testimonials .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.testimonials .head .heading {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.testimonials .head .buttons {
+  display: flex;
+  gap: 20px;
+  user-select: none;
+}
+.testimonials .head .buttons .button {
+  width: 48px;
+  height: 48px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 48px;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+.testimonials .auth {
+  display: flex;
+  margin-top: 20px;
+  /* height: 50%; */
+}
+.testimonials .auth svg {
+  scale: 0.8;
+}
+
+.download {
+  background-color: rgba(15, 15, 15, 1);
+  color: white;
+}
+.download .container {
+  width: 85%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.download .container .images {
+  display: flex;
+  gap: 20px;
+}
+.download .container .heading {
+  max-width: 600px;
+}
+.download .container .heading h2 {
+  margin-bottom: 20px;
+}
+@media (max-width: 907px) {
+  .download .container {
+    flex-direction: column;
+  }
+}
+.footer {
+  background-color: rgba(15, 15, 15, 1);
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.footer .container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.footer .container .menu {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 627px) {
+  .footer .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
 }
